@@ -1,6 +1,6 @@
 //Function that clear the display
 let counter = 0;
-let maxTries = 7;
+let maxTries = 6;
 function clr() {
     document.getElementById("display").value = "";
 }
@@ -48,7 +48,7 @@ setTimeout(() => {
 // Game Code
 let num = (Math.random() * 100);
 let ranNum = Math.trunc(num); // trunc removes after point value
-console.log("Random NUmber are ", ranNum);
+//console.log("Random NUmber are ", ranNum);
 function solve() {
     let x = document.getElementById("display").value
     let input = x;
