@@ -60,10 +60,6 @@ function solve() {
     else if (counter > maxTries) 
     {
         document.getElementById("display").value = "You have no more tries left.";
-        num = (Math.random() * 100);
-        ranNum = Math.trunc(num); 
-        //console.log(ranNum);
-        counter = 0;
     }
     else{
         if (input > 100) {
