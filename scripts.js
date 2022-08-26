@@ -1,6 +1,6 @@
 //Function that clear the display
 let counter = 0;
-let maxTries = 6;
+let maxTries = 5;
 function clr() {
     document.getElementById("display").value = "";
 }
@@ -52,15 +52,18 @@ let ranNum = Math.trunc(num); // trunc removes after point value
 function solve() {
     let x = document.getElementById("display").value
     let input = x;
-    counter += 1;
-
 
     if(input == ranNum){
+        counter += 1;
         win();
     }
     else if (counter > maxTries) 
     {
         document.getElementById("display").value = "You have no more tries left.";
+        num = (Math.random() * 100);
+        ranNum = Math.trunc(num); 
+        //console.log(ranNum);
+        counter = 0;
     }
     else{
         if (input > 100) {
@@ -71,6 +74,7 @@ function solve() {
               }, 2000);
         }
         else{
+            counter += 1;
             if (input > ranNum) {
                 console.log("Less than", input);
                 document.getElementById("display").value =("Number is Less than " + input);
@@ -95,7 +99,7 @@ function solve() {
 function reset(){
     num = (Math.random() * 100);
     ranNum = Math.trunc(num); 
-    // console.log(ranNum);
+    //console.log(ranNum);
     counter = 0;
     document.getElementById("display").value =("Game Start in few Seconds...");
     setTimeout(() => {
@@ -114,7 +118,7 @@ setTimeout(() => {
   counter = 0;
   num = (Math.random() * 100);
   ranNum = Math.trunc(num); 
-//   console.log(ranNum);
+   //console.log(ranNum);
 }
 
 
